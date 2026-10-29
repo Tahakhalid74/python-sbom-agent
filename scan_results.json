@@ -1,0 +1,279 @@
+[
+    {
+        "package": "Django",
+        "version": "2.2.0",
+        "osv_records": 75,
+        "unique_vulnerability_count": 43,
+        "risk_score": 10,
+        "vulnerabilities": [
+            {
+                "cve": "CVE-2022-28346",
+                "description": "SQL Injection in Django",
+                "severity": "CRITICAL"
+            },
+            {
+                "cve": "CVE-2020-13596",
+                "description": "XSS in Django",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2020-9402",
+                "description": "SQL injection in Django",
+                "severity": "HIGH"
+            },
+            {
+                "cve": "CVE-2026-48588",
+                "description": "Django: cache middleware may expose private responses when unrelated request cookies are present",
+                "severity": "LOW"
+            },
+            {
+                "cve": "CVE-2021-45115",
+                "description": "Denial-of-service in Django",
+                "severity": "HIGH"
+            },
+            {
+                "cve": "CVE-2021-33203",
+                "description": "Path Traversal in Django",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2019-11358",
+                "description": "XSS in jQuery as used in Drupal, Backdrop CMS, and other products",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2019-12781",
+                "description": "Django Incorrect HTTP detection with reverse-proxy connecting via HTTPS",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2022-23833",
+                "description": "Infinite Loop in Django",
+                "severity": "HIGH"
+            },
+            {
+                "cve": "CVE-2019-14234",
+                "description": "SQL Injection in Django",
+                "severity": "CRITICAL"
+            },
+            {
+                "cve": "CVE-2025-57833",
+                "description": "Django is subject to SQL injection through its column aliases",
+                "severity": "HIGH"
+            },
+            {
+                "cve": "CVE-2019-12308",
+                "description": "Django Cross-site Scripting in AdminURLFieldWidget",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2025-48432",
+                "description": "Django Improper Output Neutralization for Logs vulnerability",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2021-45116",
+                "description": "Information disclosure in Django",
+                "severity": "HIGH"
+            },
+            {
+                "cve": "CVE-2026-8404",
+                "description": "Django: UpdateCacheMiddleware may disclose cached responses due to case-sensitive Cache-Control handling",
+                "severity": "LOW"
+            },
+            {
+                "cve": "CVE-2026-53878",
+                "description": "Django: DomainNameValidator permits newline characters that may enable HTTP header injection",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2022-36359",
+                "description": "Django vulnerable to Reflected File Download attack",
+                "severity": "HIGH"
+            },
+            {
+                "cve": "CVE-2026-48587",
+                "description": "Django: has_vary_header may expose cached responses when Vary values contain whitespace",
+                "severity": "LOW"
+            },
+            {
+                "cve": "CVE-2022-22818",
+                "description": "Cross-site Scripting in Django",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2019-14232",
+                "description": "Django Denial-of-service in django.utils.text.Truncator",
+                "severity": "HIGH"
+            },
+            {
+                "cve": "CVE-2026-53877",
+                "description": " Django: GDALRaster may over-read heap memory when constructed from bytes",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2020-24584",
+                "description": "Django Incorrect Default Permissions",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2025-64459",
+                "description": "Django vulnerable to SQL injection via _connector keyword argument in QuerySet and Q objects.",
+                "severity": "CRITICAL"
+            },
+            {
+                "cve": "CVE-2021-3281",
+                "description": "Django Directory Traversal via archive.extract",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2019-14233",
+                "description": "Django Denial-of-service in strip_tags()",
+                "severity": "HIGH"
+            },
+            {
+                "cve": "CVE-2026-6873",
+                "description": "Django: signed cookies are vulnerable to salt namespace collisions",
+                "severity": "LOW"
+            },
+            {
+                "cve": "CVE-2020-7471",
+                "description": "SQL injection in Django",
+                "severity": "CRITICAL"
+            },
+            {
+                "cve": "CVE-2019-19118",
+                "description": "Django allows unintended model editing",
+                "severity": "HIGH"
+            },
+            {
+                "cve": "CVE-2021-45452",
+                "description": "Directory-traversal in Django",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2020-24583",
+                "description": "Django Incorrect Default Permissions",
+                "severity": "HIGH"
+            },
+            {
+                "cve": "CVE-2021-33571",
+                "description": "Django Access Control Bypass possibly leading to SSRF, RFI, and LFI attacks ",
+                "severity": "HIGH"
+            },
+            {
+                "cve": "CVE-2026-15830",
+                "description": "Django GeoDjango vulnerable to denial of service through deeply nested geometry collections",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2021-32052",
+                "description": "Header injection possible in Django",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2025-64458",
+                "description": "Django has a denial-of-service vulnerability in HttpResponseRedirect and HttpResponsePermanentRedirect on Windows",
+                "severity": "HIGH"
+            },
+            {
+                "cve": "CVE-2024-45231",
+                "description": "Django allows enumeration of user e-mail addresses",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2021-31542",
+                "description": "Path Traversal in Django",
+                "severity": "HIGH"
+            },
+            {
+                "cve": "CVE-2021-44420",
+                "description": "Potential bypass of an upstream access control based on URL paths in Django",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2019-14235",
+                "description": "Uncontrolled Recursion in Django",
+                "severity": "HIGH"
+            },
+            {
+                "cve": "CVE-2019-19844",
+                "description": "Django Potential account hijack via password reset form",
+                "severity": "CRITICAL"
+            },
+            {
+                "cve": "CVE-2022-28347",
+                "description": "SQL Injection in Django",
+                "severity": "CRITICAL"
+            },
+            {
+                "cve": "CVE-2020-13254",
+                "description": "Data leakage via cache key collision in Django",
+                "severity": "HIGH"
+            },
+            {
+                "cve": "CVE-2026-15307",
+                "description": "Django GeoDjango spatial lookups allow file writes and outbound requests through GDAL raster parsing",
+                "severity": "HIGH"
+            },
+            {
+                "cve": "CVE-2021-28658",
+                "description": "Directory Traversal in Django",
+                "severity": "MODERATE"
+            }
+        ]
+    },
+    {
+        "package": "Flask",
+        "version": "1.0.0",
+        "osv_records": 4,
+        "unique_vulnerability_count": 2,
+        "risk_score": 7,
+        "vulnerabilities": [
+            {
+                "cve": "CVE-2026-27205",
+                "description": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
+                "severity": "LOW"
+            },
+            {
+                "cve": "CVE-2023-30861",
+                "description": "Flask vulnerable to possible disclosure of permanent session cookie due to missing Vary: Cookie header",
+                "severity": "HIGH"
+            }
+        ]
+    },
+    {
+        "package": "requests",
+        "version": "2.19.0",
+        "osv_records": 10,
+        "unique_vulnerability_count": 5,
+        "risk_score": 7,
+        "vulnerabilities": [
+            {
+                "cve": "CVE-2024-47081",
+                "description": "Requests vulnerable to .netrc credentials leak via malicious URLs",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2024-35195",
+                "description": "Requests `Session` object does not verify requests after making first request with verify=False",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2026-25645",
+                "description": "Requests has Insecure Temp File Reuse in its extract_zipped_paths() utility function",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2023-32681",
+                "description": "Unintended leak of Proxy-Authorization header in requests",
+                "severity": "MODERATE"
+            },
+            {
+                "cve": "CVE-2018-18074",
+                "description": "Insufficiently Protected Credentials in Requests",
+                "severity": "HIGH"
+            }
+        ]
+    }
+]
