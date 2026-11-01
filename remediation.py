@@ -1,10 +1,12 @@
 
 import requests
+from packaging.version import Version, InvalidVersion
 
 
 def extract_fixed_versions(vulnerability, package_name):
     """
-    Extract reported fixed versions from an OSV vulnerability record.
+    Extract valid Python package fixed versions from OSV.
+    Ignore Git commit hashes and invalid version strings.
     """
 
     fixed_versions = set()
@@ -19,16 +21,34 @@ def extract_fixed_versions(vulnerability, package_name):
             continue
 
         for version_range in affected.get("ranges", []):
-            for event in version_range.get("events", []):
-                if "fixed" in event:
-                    fixed_versions.add(event["fixed"])
 
-    return sorted(fixed_versions)
+            # Git ranges contain commit identifiers, not PyPI versions.
+            if version_range.get("type") != "ECOSYSTEM":
+                continue
+
+            for event in version_range.get("events", []):
+                fixed = event.get("fixed")
+
+                if not fixed:
+                    continue
+
+                try:
+                    valid_version = Version(fixed)
+
+                    # Keep valid Python package version strings
+                    fixed_versions.add(str(valid_version))
+
+                except InvalidVersion:
+                    # Ignore invalid release identifiers
+                    continue
+
+    # Sort versions numerically, not alphabetically
+    return sorted(fixed_versions, key=Version)
 
 
 def get_fixed_versions(vulnerability_id, package_name):
     """
-    Retrieve vulnerability details from OSV and extract fixes.
+    Fetch an OSV advisory and return its fixed versions.
     """
 
     url = f"https://api.osv.dev/v1/vulns/{vulnerability_id}"
@@ -56,11 +76,17 @@ def get_fixed_versions(vulnerability_id, package_name):
 
 
 if __name__ == "__main__":
-    result = get_fixed_versions(
-        "GHSA-2gwj-7jmv-h26r",
-        "django"
-    )
+    test_cases = [
+        ("GHSA-2gwj-7jmv-h26r", "django"),
+        ("GHSA-j8r2-6x86-q33q", "requests")
+    ]
 
-    print("\nRemediation Results")
-    print("----------------------------")
-    print(result)
+    for vulnerability_id, package_name in test_cases:
+        result = get_fixed_versions(
+            vulnerability_id,
+            package_name
+        )
+
+        print("\nRemediation Results")
+        print("-" * 40)
+        print(result)
